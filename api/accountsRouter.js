@@ -38,8 +38,8 @@ router.post('/', validate, (req, res) => {
             db('accounts')
                 .where({ id }) 
                 .first() 
-                .then(post => {
-                    res.status(200).json(post);
+                .then(account => {
+                    res.status(200).json(account);
                 });
         })
         .catch(err => {
